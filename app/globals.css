@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: url('/c355.png') 2 2, auto;
+}
+
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+li {
+    list-style: none;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+a {
+    color: inherit;
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
+img,
+picture,
+svg,
+video,
+canvas {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    font-style: italic;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+        transition: none;
+    }
+}
+
+body,
+html {
+}
+
+.container {
+    width: 1330px;
+    padding: 0 15px;
+    display: block;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+.main {
+}
+
+.header {
+    text-align: center;
+    padding: 15px 0;
+}
+
+.con1 {
+    width: 100%;
+    display: block;
+    padding: 30px 0;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    background: url('/bg_g.png') no-repeat center / cover;
+}
+
+.con1 .mark {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+}
+.con1 .mark h1 {
+    text-align: center;
+    display: block;
+    font-size: 130px;
+    font-weight: 700;
+    color: #999;
+    line-height: 100%;
+    /* box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5); */
+    /* text-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); */
+}
+.con1 .mark h2 {
+    text-align: right;
+    display: block;
+    font-size: 26px;
+    font-weight: 500;
+    color: #333;
+    width: 42%;
+    margin: 0 auto;
+}
+.con1 .mark h3 {
+    text-align: center;
+    display: block;
+    margin-top: 35px;
+    color: #c9d5ad;
+    font-size: 28px;
+}
+.con1 .mark h3 span {
+    color: #fff;
+    font-weight: 700;
+}
+
+.con1 .introduce {
+    display: block;
+    padding: 150px 0;
+}
+.con1 .introduce ul {
+    display: flex;
+    align-items: center;
+    justify-content: normal;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+.con1 .introduce ul li {
+    font-size: 20px;
+    width: 33%;
+    margin-top: 30px;
+}
+.con1 .introduce li span {
+    display: block;
+}
+.con1 .introduce li span.i_menu {
+}
+.con1 .introduce li span.i_con {
+}
+
+.con1 .introduce li a {
+    z-index: 1;
+}
+
+.con1 .introduce .me {
+    background: url('/man2.png') no-repeat center;
+    display: block;
+    width: 100%;
+    height: 300px;
+}
+
+.con2 {
+    width: 100%;
+    display: block;
+    padding: 100px 0;
+    background: #fff;
+    z-index: 2;
+    position: relative;
+}
+
+span.line {
+    display: block;
+    margin: 0 auto;
+    width: 10%;
+    height: 1px;
+    background: #fff;
+    margin-top: 40px;
+}

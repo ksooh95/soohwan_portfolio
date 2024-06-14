@@ -5,6 +5,10 @@
     cursor: url('/c355.png') 2 2, auto;
 }
 
+:root {
+    --txt-c: #e1dfdd;
+}
+
 ul[role='list'],
 ol[role='list'] {
     list-style: none;
@@ -74,6 +78,7 @@ html {
     margin: 0 auto;
 }
 .main {
+    width: 100%;
 }
 
 .header {
@@ -90,7 +95,70 @@ html {
     top: 0;
     left: 0;
     z-index: 0;
-    background: url('/bg_g.png') no-repeat center / cover;
+    min-height: 857px;
+    height: 857px;
+    max-height: 857px;
+    background-color: #e1dfdd;
+}
+.con1::after {
+    content: '';
+    width: calc(100% + 20rem);
+    height: calc(100% + 20rem);
+    background-position: 50%;
+    position: absolute;
+    left: -10rem;
+    top: -10rem;
+    display: block;
+    background-image: url('/noise.png');
+    will-change: transform;
+    animation: noise 1s steps(2) infinite;
+    z-index: 100;
+}
+
+@keyframes noise {
+    0% {
+        transform: translate3d(0, 9rem, 0);
+    }
+
+    10% {
+        transform: translate3d(-1rem, -4rem, 0);
+    }
+
+    20% {
+        transform: translate3d(-8rem, 2rem, 0);
+    }
+
+    30% {
+        transform: translate3d(9rem, -9rem, 0);
+    }
+
+    40% {
+        transform: translate3d(-2rem, 7rem, 0);
+    }
+
+    50% {
+        transform: translate3d(-9rem, -4rem, 0);
+    }
+
+    60% {
+        transform: translate3d(2rem, 6rem, 0);
+    }
+
+    70% {
+        transform: translate3d(7rem, -8rem, 0);
+    }
+
+    80% {
+        transform: translate3d(-9rem, 1rem, 0);
+    }
+
+    90% {
+        transform: translate3d(6rem, -5rem, 0);
+    }
+
+    to {
+        transform: translate3d(-7rem, 0, 0);
+    }
 }
 
 .con1 .mark {
@@ -98,25 +166,34 @@ html {
     display: block;
     margin: 0 auto;
     width: 100%;
+    position: absolute;
+    top: 30px;
+    left: 30px;
 }
 .con1 .mark h1 {
-    text-align: center;
+    text-align: left;
     display: block;
-    font-size: 130px;
-    font-weight: 700;
-    color: #999;
-    line-height: 100%;
-    /* box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5); */
-    /* text-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); */
-}
-.con1 .mark h2 {
-    text-align: right;
-    display: block;
-    font-size: 26px;
-    font-weight: 500;
+    font-size: 100px;
+    font-weight: 600;
+    line-height: 90%;
     color: #333;
-    width: 42%;
-    margin: 0 auto;
+    /* color: transparent;
+    background: linear-gradient(to left, #333 60%, #fff 40%);
+    background-clip: text;
+    background-size: 200% 100%;
+    animation: stripes 3s forwards; */
+}
+/* @keyframes stripes {
+    to {
+        background-position: -100% 0;
+    }
+} */
+.con1 .mark h2 {
+    text-align: LEFT;
+    display: block;
+    font-size: 24px;
+    font-weight: 400;
+    color: #333;
 }
 .con1 .mark h3 {
     text-align: center;
@@ -128,6 +205,69 @@ html {
 .con1 .mark h3 span {
     color: #fff;
     font-weight: 700;
+}
+.con1 .my_pic {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    display: block;
+    width: 250px;
+    height: 350px;
+    background: #999;
+}
+
+.con1 .mark2 {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+}
+.con1 .mark2 h1 {
+    text-align: right;
+    display: block;
+    font-size: 60px;
+    font-weight: 700;
+    color: #333;
+    line-height: 100%;
+}
+.con1 .mark2 h2 {
+    font-weight: 400;
+    font-size: 24px;
+    color: #333;
+    text-align: right;
+}
+
+.con1 .sc_down {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+}
+.con1 .sc_down .ar {
+    display: block;
+    font-size: 24px;
+    padding-bottom: 8px;
+    animation: bound 0.8s ease-in-out infinite;
+}
+.con1 .sc_down .ar_t {
+    font-size: 14px;
+}
+
+@keyframes bound {
+    0% {
+        transform: translateY(10px);
+    }
+    50% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(10px);
+    }
+}
+.con1 .sc_down .ar_t {
+    display: block;
 }
 
 .con1 .introduce {
@@ -165,15 +305,6 @@ html {
     height: 300px;
 }
 
-.con2 {
-    width: 100%;
-    display: block;
-    padding: 100px 0;
-    background: #fff;
-    z-index: 2;
-    position: relative;
-}
-
 span.line {
     display: block;
     margin: 0 auto;
@@ -181,4 +312,75 @@ span.line {
     height: 1px;
     background: #fff;
     margin-top: 40px;
+}
+
+.con2 {
+    width: 100%;
+    display: block;
+    padding: 100px 0;
+    background: #212121;
+    z-index: 2;
+    position: relative;
+
+    padding-bottom: 500px;
+}
+
+.con2 .about_me {
+    display: flex;
+    align-items: flex-start;
+    justify-content: normal;
+    width: 100%;
+}
+.con2 .about_me h1.side_tit {
+    color: #fff;
+    width: 20%;
+    font-size: 90px;
+    font-weight: 700;
+    writing-mode: vertical-lr;
+    color: var(--txt-c);
+}
+.con2 .about_me .right_con1 {
+    width: 40%;
+}
+.con2 .about_me .right_con2 {
+    width: 40%;
+}
+.con2 .about_me ul {
+    display: block;
+    width: 100%;
+}
+.con2 .about_me ul li {
+    color: var(--txt-c);
+    display: flex;
+    align-items: center;
+    justify-content: normal;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 400;
+}
+.con2 .about_me ul li .li_i {
+    text-decoration: underline;
+}
+.con2 .about_me ul li span:first-child {
+    margin-right: 10px;
+}
+
+.con2 .about_me .sec {
+    margin-bottom: 50px;
+    color: var(--txt-c);
+}
+.con2 .about_me .sec .ca {
+    margin-bottom: 30px;
+}
+.con2 .about_me .sec .ca h3 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.con2 .about_me .sec h2 {
+    color: var(--txt-c);
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 30px;
 }

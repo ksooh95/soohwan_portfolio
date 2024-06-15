@@ -255,6 +255,14 @@ html {
     font-size: 14px;
 }
 
+.con1 .update {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #999;
+}
+
 @keyframes bound {
     0% {
         transform: translateY(10px);
@@ -318,7 +326,7 @@ span.line {
     width: 100%;
     display: block;
     padding: 100px 0;
-    background: #212121;
+    background: #232323;
     z-index: 2;
     position: relative;
 
@@ -330,6 +338,9 @@ span.line {
     align-items: flex-start;
     justify-content: normal;
     width: 100%;
+}
+.con2 .about_me.pro {
+    margin-top: 150px;
 }
 .con2 .about_me h1.side_tit {
     color: #fff;
@@ -383,4 +394,88 @@ span.line {
     font-size: 32px;
     font-weight: 800;
     margin-bottom: 30px;
+}
+.con2 .pro_sec_wrap {
+    display: flex;
+    align-items: flex-start;
+    justify-content: normal;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.about_me.pro .right_con1 {
+    width: 80%;
+}
+
+.con2 .pro_sec {
+    display: block;
+    width: 31.4%;
+    /* border: 1px solid #999; */
+}
+.con2 .pro_sec .pro_con {
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
+    justify-content: center;
+    background: #333;
+    border-radius: 7px;
+    overflow: hidden;
+    position: relative;
+}
+.con2 .pro_sec .pro_con img {
+    width: 100%;
+    display: block;
+    /* border-bottom: 1px solid #999; */
+}
+.con2 .pro_sec .pro_con .pro_info {
+    display: block;
+    width: 100%;
+    padding: 15px;
+}
+.con2 .pro_sec .pro_con .pro_info h3 {
+    color: var(--txt-c);
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.con2 .pro_sec .pro_con .pro_info p {
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--txt-c);
+}
+
+.con2 .pro_sec .pro_con .pro_info .pro_info2 {
+    display: flex;
+    align-items: center;
+    justify-content: normal;
+    gap: 8px;
+    margin-top: 15px;
+}
+.con2 .pro_sec .pro_con .pro_info .pro_info2 span {
+    display: block;
+    border: 1px solid var(--txt-c);
+    color: var(--txt-c);
+    font-size: 12px;
+    padding: 2px 4px;
+}
+
+.con2 .pro_sec .pro_con .pro_con_hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #999;
+    color: #fff;
+    display: none;
+}
+.con2 .pro_sec .pro_con.mouseOn .pro_con_hover {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #999;
+    color: #fff;
+    display: block;
 }

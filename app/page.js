@@ -60,6 +60,9 @@ export default function Home() {
                     <span className="ar">↓</span>
                     <span className="ar_t">SCROLL</span>
                 </div>
+                <div className="update">
+                  <p>Update 2024.06.15</p>
+                </div>
             </div>
             <div className="con2">
                 <div className="container">
@@ -117,7 +120,82 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
-                </div> 
+                    <div className="about_me pro">
+                        <h1 className="side_tit">Project</h1>
+                        <div className="right_con1">
+                            <div className="pro_sec_wrap">
+                                <div className="pro_sec">
+                                    <div className="pro_con">
+                                        <div className="pro_con_hover">HOVER</div>
+                                        <img src="/smdb.png" alt="" />
+                                        <div className="pro_info">
+                                            <h3>SMDB MOVIE</h3>
+                                            <p>
+                                                TMDB OPEN API 를 사용하여 현재 개봉영화, 인기있는 TV시리즈, 현재 검색
+                                                트렌드 등을 소개해주는 사이트입니다.
+                                            </p>
+                                            <div className="pro_info2">
+                                                <span>배포완료</span>
+                                                <span>업데이트중</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="pro_sec">
+                                    <div className="pro_con">
+                                        <div className="pro_con_hover">HOVER</div>
+                                        <img src="/smdb.png" alt="" />
+                                        <div className="pro_info">
+                                            <h3>SMDB MOVIE</h3>
+                                            <p>
+                                                TMDB OPEN API 를 사용하여 현재 개봉영화, 인기있는 TV시리즈, 현재 검색
+                                                트렌드 등을 소개해주는 사이트입니다.
+                                            </p>
+                                            <div className="pro_info2">
+                                                <span>배포완료</span>
+                                                <span>업데이트중</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="pro_sec">
+                                    <div className="pro_con">
+                                        <div className="pro_con_hover">HOVER</div>
+                                        <img src="/smdb.png" alt="" />
+                                        <div className="pro_info">
+                                            <h3>SMDB MOVIE</h3>
+                                            <p>
+                                                TMDB OPEN API 를 사용하여 현재 개봉영화, 인기있는 TV시리즈, 현재 검색
+                                                트렌드 등을 소개해주는 사이트입니다.
+                                            </p>
+                                            <div className="pro_info2">
+                                                <span>배포완료</span>
+                                                <span>업데이트중</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="pro_sec">
+                                    <div className="pro_con">
+                                        <div className="pro_con_hover">HOVER</div>
+                                        <img src="/smdb.png" alt="" />
+                                        <div className="pro_info">
+                                            <h3>SMDB MOVIE</h3>
+                                            <p>
+                                                TMDB OPEN API 를 사용하여 현재 개봉영화, 인기있는 TV시리즈, 현재 검색
+                                                트렌드 등을 소개해주는 사이트입니다.
+                                            </p>
+                                            <div className="pro_info2">
+                                                <span>배포완료</span>
+                                                <span>업데이트중</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     );

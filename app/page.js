@@ -1,16 +1,69 @@
 'use client';
-
-import Image from 'next/image';
-import styles from './page.module.css';
-import Link from 'next/link';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import PortModal from './components/port_modal';
 
 export default function Home() {
     useEffect(() => {
         AOS.init();
     }, []);
+
+    const [modal, setModal] = useState('');
+    const closeModal = () => {
+        setModal('');
+    };
+
+    const project = [
+        {
+            tag: '개인 프로젝트',
+            img: '/port.png',
+            title: 'SooHwan Portfolio',
+            description:
+                '김수환의 개인 포트폴리오 사이트, 개인프로젝트와 팀프로젝트 등 한데 모아둔 포트폴리오 사이트입니다.',
+            status: ['배포예정', '업데이트중', '개인 프로젝트'],
+            git: 'https://github.com/ksooh95/soohwan_portfolio',
+            deploy: null,
+        },
+        {
+            tag: '개인 프로젝트',
+            img: '/smdb.png',
+            title: 'SMDB MOVIE',
+            description:
+                'NextJS 환경에서 혼자 만들어본 TMDB OPEN API 를 사용하여 현재 개봉영화, 인기있는 TV시리즈, 현재 검색 트렌드 등을 소개해주는 사이트입니다.',
+            status: ['배포완료', '업데이트중', '개인 프로젝트'],
+            git: 'https://github.com/ksooh95/SMDB',
+            deploy: 'https://vercel-smdb.vercel.app/',
+        },
+        {
+            tag: '팀 프로젝트',
+            img: '/pop.png',
+            title: 'Pop, spot !',
+            description:
+                '엘리스 부트캠프 2차 팀프로젝트때 팀원들과 제작했던 팝업스토어의 정보와 예약을 할수있는 홈페이지 입니다.',
+            status: ['배포중단', '제작완료', '팀 프로젝트'],
+            git: '',
+            deploy: null,
+        },
+        {
+            tag: '개인 프로젝트',
+            img: '/memo.png',
+            title: 'MEMO APP',
+            description: 'NextJs 환경에서 MongoDB를 사용하여 프론트와,백 둘다 처음 혼자 만들어본 간단한 메모 앱입니다.',
+            status: ['배포완료', '업데이트중', '개인 프로젝트'],
+            git: 'https://github.com/ksooh95/memoapp',
+            deploy: 'https://memoapp-sable.vercel.app/list',
+        },
+        {
+            tag: '팀 프로젝트',
+            img: '/panda.png',
+            title: 'Panda Flower',
+            description: '엘리스 부트캠프 팀프로젝트 1차 때 만든 카테고리별로 꽃을 판매하는 사이트를 제작하였습니다.',
+            status: ['배포중단', '제작완료', '팀 프로젝트'],
+            git: '',
+            deploy: null,
+        },
+    ];
 
     return (
         <div className="main">
@@ -21,34 +74,6 @@ export default function Home() {
                     </h1>
                     <h2>- FRONT END</h2>
                 </div>
-                {/* <div className="introduce" data-aos="fade" data-aos-duration="1000" data-aos-delay="500">
-                    <h1>About me</h1>
-                    <ul>
-                        <li>
-                            <span className="i_menu">이름</span> <span className="i_con">김수환</span>
-                        </li>
-                        <li>
-                            <span className="i_menu">생년월일</span> <span className="i_con">1995. 09. 04</span>
-                        </li>
-                        <li>
-                            <span className="i_menu">거주지</span> <span className="i_con">인천광역시</span>
-                        </li>
-                        <li>
-                            <span className="i_menu">이메일</span> <span className="i_con">ksooh95@gmail.com</span>
-                        </li>
-                        <li>
-                            <span className="i_menu">이력서</span>{' '}
-                            <span className="i_con">
-                                <a href="https://my.surfit.io/w/529780883" target="_blank">
-                                    🔗 https://my.surfit.io/w/529780883
-                                </a>
-                            </span>
-                        </li>
-                    </ul>
-                    <div className="me">
-                        <div className="scroll_down">밑으로</div>
-                    </div>
-                </div> */}
                 <div className="my_pic"></div>
                 <div className="mark2">
                     <h2> - FRONT END</h2>
@@ -61,7 +86,7 @@ export default function Home() {
                     <span className="ar_t">SCROLL</span>
                 </div>
                 <div className="update">
-                  <p>Update 2024.06.15</p>
+                    <p>Update 2024.06.15</p>
                 </div>
             </div>
             <div className="con2">
@@ -70,7 +95,7 @@ export default function Home() {
                         <h1 className="side_tit">About me</h1>
                         <div className="right_con1">
                             <div className="sec">
-                                <h2>About me</h2>
+                                <h2>Info</h2>
                                 <ul>
                                     <li>
                                         <span>이름 :</span>
@@ -124,79 +149,51 @@ export default function Home() {
                         <h1 className="side_tit">Project</h1>
                         <div className="right_con1">
                             <div className="pro_sec_wrap">
-                                <div className="pro_sec">
-                                    <div className="pro_con">
-                                        <div className="pro_con_hover">HOVER</div>
-                                        <img src="/smdb.png" alt="" />
-                                        <div className="pro_info">
-                                            <h3>SMDB MOVIE</h3>
-                                            <p>
-                                                TMDB OPEN API 를 사용하여 현재 개봉영화, 인기있는 TV시리즈, 현재 검색
-                                                트렌드 등을 소개해주는 사이트입니다.
-                                            </p>
-                                            <div className="pro_info2">
-                                                <span>배포완료</span>
-                                                <span>업데이트중</span>
+                                {project.map((a, ai) => {
+                                    return (
+                                        <div key={ai} className="pro_sec">
+                                            <div className="pro_con">
+                                                <div className="pro_con_hover">
+                                                    <h3>{a.title}</h3>
+                                                    <button
+                                                        className="more_btn"
+                                                        onClick={() => {
+                                                            setModal(a.title);
+                                                            console.log(modal);
+                                                        }}
+                                                    >
+                                                        자세히보기
+                                                    </button>
+                                                    {a.deploy === null ? null : (
+                                                        <a href={a.deploy} target="_blank">
+                                                            배포사이트 바로가기
+                                                        </a>
+                                                    )}
+
+                                                    <a href={a.git} target="_blank">
+                                                        GitHub 바로가기
+                                                    </a>
+                                                </div>
+                                                <img src={a.img} alt="" />
+                                                <div className="pro_info">
+                                                    <h3>{a.title}</h3>
+                                                    <p>{a.description}</p>
+                                                    <div className="pro_info2">
+                                                        {a.status.map((e, ei) => {
+                                                            return <span key={ei}>{e}</span>;
+                                                        })}
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                                <div className="pro_sec">
-                                    <div className="pro_con">
-                                        <div className="pro_con_hover">HOVER</div>
-                                        <img src="/smdb.png" alt="" />
-                                        <div className="pro_info">
-                                            <h3>SMDB MOVIE</h3>
-                                            <p>
-                                                TMDB OPEN API 를 사용하여 현재 개봉영화, 인기있는 TV시리즈, 현재 검색
-                                                트렌드 등을 소개해주는 사이트입니다.
-                                            </p>
-                                            <div className="pro_info2">
-                                                <span>배포완료</span>
-                                                <span>업데이트중</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="pro_sec">
-                                    <div className="pro_con">
-                                        <div className="pro_con_hover">HOVER</div>
-                                        <img src="/smdb.png" alt="" />
-                                        <div className="pro_info">
-                                            <h3>SMDB MOVIE</h3>
-                                            <p>
-                                                TMDB OPEN API 를 사용하여 현재 개봉영화, 인기있는 TV시리즈, 현재 검색
-                                                트렌드 등을 소개해주는 사이트입니다.
-                                            </p>
-                                            <div className="pro_info2">
-                                                <span>배포완료</span>
-                                                <span>업데이트중</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="pro_sec">
-                                    <div className="pro_con">
-                                        <div className="pro_con_hover">HOVER</div>
-                                        <img src="/smdb.png" alt="" />
-                                        <div className="pro_info">
-                                            <h3>SMDB MOVIE</h3>
-                                            <p>
-                                                TMDB OPEN API 를 사용하여 현재 개봉영화, 인기있는 TV시리즈, 현재 검색
-                                                트렌드 등을 소개해주는 사이트입니다.
-                                            </p>
-                                            <div className="pro_info2">
-                                                <span>배포완료</span>
-                                                <span>업데이트중</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                    );
+                                })}
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            {modal === '' ? null : <PortModal closeModal={closeModal} />}
         </div>
     );
 }

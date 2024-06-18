@@ -1,14 +1,8 @@
 'use client';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import PortModal from './components/port_modal';
 
 export default function Home() {
-    useEffect(() => {
-        AOS.init();
-    }, []);
-
     const [modal, setModal] = useState('');
     const closeModal = () => {
         setModal('');

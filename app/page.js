@@ -1,7 +1,6 @@
 'use client';
 import { useState } from 'react';
 import PortModal from './components/port_modal';
-x``
 export default function Home() {
     const [modal, setModal] = useState('');
     const closeModal = () => {

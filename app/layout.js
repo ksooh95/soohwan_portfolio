@@ -1,8 +1,6 @@
 import { Inter } from 'next/font/google';
 import './globals.css';
 import { Noto_Sans_KR } from 'next/font/google';
-import { Lora } from 'next/font/google';
-
 const notoSansKr = Noto_Sans_KR({
     weight: ['500', '600', '700', '800', '900'],
     subsets: ['latin'],

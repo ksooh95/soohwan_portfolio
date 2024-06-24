@@ -88,7 +88,9 @@ export default function Main() {
                     </h1>
                     <h2>- FRONT END</h2>
                 </div>
-                <div className="my_pic"></div>
+                <div className="my_pic">
+                    <img src="/my_pic.png" alt="" />
+                </div>
                 <div className="mark2">
                     <h2> - FRONT END</h2>
                     <h1>
@@ -100,7 +102,7 @@ export default function Main() {
                     <span className="ar_t">SCROLL</span>
                 </div>
                 <div className="update">
-                    <p>Update 2024.06.18</p>
+                    <p>Update 2024.06.24</p>
                 </div>
             </div>
             <div className="con2">

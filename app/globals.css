@@ -214,6 +214,14 @@ html {
     width: 250px;
     height: 350px;
     background: #999;
+    overflow: hidden;
+}
+.con1 .my_pic img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    scale: 1.4;
+    object-fit: cover;
 }
 
 .con1 .mark2 {

@@ -95,9 +95,7 @@ html {
     top: 0;
     left: 0;
     z-index: 0;
-    min-height: 857px;
-    height: 857px;
-    max-height: 857px;
+    height: 100vh;
     background-color: #e1dfdd;
     overflow: hidden;
 }
@@ -213,7 +211,6 @@ html {
     display: block;
     width: 250px;
     height: 350px;
-    background: #999;
     overflow: hidden;
 }
 .con1 .my_pic img {

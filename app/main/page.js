@@ -12,6 +12,19 @@ export default function Main() {
     const project = [
         {
             tag: '개인 프로젝트',
+            img: '/code1.png',
+            subimg: ['/code2.png', '/code3.png', '/code4.png'],
+            title: 'Todo',
+            description: 'Codeit 단기심화 스프린트 과제로 만든 Next와 typescript를 이용해 만든 todo 앱입니다. ',
+            description2:
+                '입력창에 할일을 적은후, enter 혹은 추가하기 클릭시 할일이 추가되고 체크시 todo <-> done 상태를 오갈수있습니다. \n 상세 페에지에 들어갈시 이미지 ( 최대 1개 ) 를 업로드할수있고, 상태 및 제목변경, 간단한 메모를 적을수있습니다.',
+            status: ['배포완료', '개인 프로젝트'],
+            git: 'https://github.com/ksooh95/codeit_todo',
+            deploy: 'https://codeit-todo.vercel.app/',
+            stack: ['NextJS', 'Typescript', 'React', 'HTML', 'CSS', 'GIT'],
+        },
+        {
+            tag: '개인 프로젝트',
             img: '/port.png',
             subimg: ['/port2.png', '/port3.png'],
             title: 'SooHwan Portfolio',
@@ -21,7 +34,7 @@ export default function Main() {
                 '김수환의 개인 포트폴리오 사이트, 개인프로젝트와 팀프로젝트 등 한데 모아둔 포트폴리오 사이트입니다.',
             status: ['배포예정', '업데이트중', '개인 프로젝트'],
             git: 'https://github.com/ksooh95/soohwan_portfolio',
-            deploy: null,
+            deploy: 'https://soohwan-portfolio.vercel.app/',
             stack: ['NextJS', 'React', 'HTML', 'CSS', 'GIT'],
         },
         {
@@ -209,16 +222,18 @@ export default function Main() {
                     </div>
                 </div>
             </div>
-            {modal === 'SooHwan Portfolio' ? (
+            {modal === 'Todo' ? (
                 <PortModal closeModal={closeModal} project={project[0]} />
-            ) : modal === 'SMDB MOVIE' ? (
+            ) : modal === 'SooHwan Portfolio' ? (
                 <PortModal closeModal={closeModal} project={project[1]} />
-            ) : modal === 'Pop, spot !' ? (
+            ) : modal === 'SMDB MOVIE' ? (
                 <PortModal closeModal={closeModal} project={project[2]} />
-            ) : modal === 'MEMO APP' ? (
+            ) : modal === 'Pop, spot !' ? (
                 <PortModal closeModal={closeModal} project={project[3]} />
-            ) : modal === 'Panda Flower' ? (
+            ) : modal === 'MEMO APP' ? (
                 <PortModal closeModal={closeModal} project={project[4]} />
+            ) : modal === 'Panda Flower' ? (
+                <PortModal closeModal={closeModal} project={project[5]} />
             ) : null}
         </div>
     );

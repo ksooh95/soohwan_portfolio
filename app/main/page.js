@@ -115,7 +115,7 @@ export default function Main() {
                     <span className="ar_t">SCROLL</span>
                 </div>
                 <div className="update">
-                    <p>Update 2024.06.24</p>
+                    <p>Update 2024.07.20</p>
                 </div>
             </div>
             <div className="con2">

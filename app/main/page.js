@@ -205,7 +205,7 @@ export default function Main() {
                       <div className="pro_con">
                         <div className="pro_con_hover">
                           <h3>{a.title}</h3>
-                          <button
+                          {/* <button
                             className="more_btn"
                             onClick={() => {
                               setModal(a.title);
@@ -213,7 +213,7 @@ export default function Main() {
                             }}
                           >
                             자세히보기
-                          </button>
+                          </button> */}
                           {a.deploy === null ? null : (
                             <a href={a.deploy} target="_blank">
                               배포사이트 바로가기
